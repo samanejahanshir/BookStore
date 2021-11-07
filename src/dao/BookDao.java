@@ -15,7 +15,7 @@ public class BookDao extends  AccessDao{
     public List<Book> getAll() throws SQLException, ClassNotFoundException {
         if (getConnection() != null) {
 
-            PreparedStatement statement = getConnection().prepareStatement("select * from store_book");
+            PreparedStatement statement = getConnection().prepareStatement("select * from book");
             ResultSet resultSet = statement.executeQuery();
             List<Book> books = new ArrayList<>();
             while (resultSet.next()) {
