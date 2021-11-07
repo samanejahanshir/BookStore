@@ -85,4 +85,18 @@ public class Book {
     public long calculateTotalSoldPrice(){
          return  soldNumber*price;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", year='" + year + '\'' +
+                ", price=" + price +
+                ", soldNumber=" + soldNumber +
+                ", totalSoldPrice=" + totalSoldPrice +
+                ", authorName='" + authorName + '\'' +
+                '}';
+    }
 }
+
