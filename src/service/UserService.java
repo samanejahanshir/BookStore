@@ -30,7 +30,7 @@ public class UserService {
        // Map<String, List<Book>> map = bookList.stream().collect(Collectors.groupingBy(i -> i.getAuthorName()));
 
 
-          return bookList.stream().collect(Collectors.groupingBy(i -> i.getAuthorName()));
+          return bookList.stream().collect(Collectors.groupingBy(book -> book.getAuthorName()));
 
     }
 
@@ -40,7 +40,7 @@ public class UserService {
         Map<String, List<Book>> mapBookSorted = new HashMap<>();
         for (Map.Entry<String, List<Book>> stringListEntry : mapBook.entrySet()) {
             books = stringListEntry.getValue();
-            books.sort((a, b) -> b.getYear().compareTo(a.getYear()));
+            books.sort((book1, book2) -> book2.getYear().compareTo(book1.getYear()));
             mapBookSorted.put(stringListEntry.getKey(), books);
 
         }
